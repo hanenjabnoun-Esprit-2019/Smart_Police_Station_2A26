@@ -26,14 +26,16 @@ void MainWindow::on_pb_ajouter_clicked()
     QString nom=ui->le_nom->text();
      QString prenom=ui->le_prenom->text();
     Citoyen E(numero,nom,prenom);
-    E.ajouter();
-    //QMessageBox msgBox;
+    bool test=E.ajouter();
+    QMessageBox msgBox;
 
-    //if(test)
-      //  msgBox.setText("Ajourter avec succes.");
-   // else
-    //    msgBox.setText("echec de l'ajout.");
-    //    msgBox.exec();
+    if(test)
+       { msgBox.setText("Ajourter avec succes.");
+    ui->tab_citoyen->setModel(E.afficher());
+     }
+   else
+       msgBox.setText("echec de l'ajout.");
+      msgBox.exec();
 }
 
 void MainWindow::on_pb_supprimer_clicked()
@@ -41,11 +43,13 @@ void MainWindow::on_pb_supprimer_clicked()
     Citoyen E1;
     E1.setnumero(ui->le_numero_sup->text().toInt());
     bool test=E1.supprimer(E1.getnumero());
-   // QMessageBox msgBox;
+    QMessageBox msgBox;
 
-    //if(test)
-      //  msgBox.setText("supprimer avec succes.");
-    //else
-      //  msgBox.setText("echec de la suppresion.");
-        //msgBox.exec();
+   if(test)
+       {msgBox.setText("supprimer avec succes.");
+    ui->tab_citoyen->setModel(E.afficher());
+     }
+    else
+        msgBox.setText("echec de la suppresion.");
+        msgBox.exec();
 }

@@ -16,7 +16,7 @@ void Citoyen::setnumero(int numero){this->numero=numero;}
 void Citoyen::setnom(QString nom){this->nom=nom;}
 void Citoyen::setprenom(QString prenom){this->prenom=prenom;}
 bool Citoyen::ajouter()
-{bool test=false;
+{//bool test=false;
     QSqlQuery query;
     QString numero_string=QString::number(numero);
     query.prepare("INSERT INTO citoyen (numero, nom, prenom) "
@@ -24,20 +24,20 @@ bool Citoyen::ajouter()
     query.bindValue(0, numero_string);
     query.bindValue(1, nom);
     query.bindValue(2, prenom);
-     query.exec();
+     return query.exec();
 
 
-    return test;
+    //return test;
 }
 bool Citoyen::supprimer(int numero)
-{bool test=false;
+{//bool test=false;
     QSqlQuery query;
     query.prepare("Delete from citoyen where numero=:numero");
     query.bindValue(0, numero);
-    query.exec();
+    return query.exec();
 
 
-    return test;
+    //return test;
 
 
 

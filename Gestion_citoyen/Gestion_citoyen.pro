@@ -11,15 +11,20 @@ CONFIG += c++11
 SOURCES += \
     citoyen.cpp \
     connection.cpp \
+    demande_a.cpp \
+    dialog.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     citoyen.h \
     connection.h \
+    demande_a.h \
+    dialog.h \
     mainwindow.h
 
 FORMS += \
+    dialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.
