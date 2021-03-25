@@ -1,4 +1,4 @@
-#ifndef MENU_GESTION_PERSO_H
+ifndef MENU_GESTION_PERSO_H
 #define MENU_GESTION_PERSO_H
 
 #include <QWidget>

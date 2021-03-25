@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_SupprPersonnel_clicked();
 
+    
+    
 private:
     Ui::Vue_perso *ui;
     Personnel P;

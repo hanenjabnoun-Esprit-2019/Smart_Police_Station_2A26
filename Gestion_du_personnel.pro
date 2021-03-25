@@ -17,28 +17,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
-    dialog1.cpp \
+    crud_personnel.cpp \
     horaire.cpp \
     main.cpp \
     mainwindow.cpp \
-    menu_gestion_perso.cpp \
-    personnel.cpp \
-    vue_perso.cpp
+    menu_gestion_personnel.cpp \
+    personnel.cpp
 
 HEADERS += \
     connection.h \
-    dialog1.h \
+    crud_personnel.h \
     horaire.h \
     mainwindow.h \
-    menu_gestion_perso.h \
-    personnel.h \
-    vue_perso.h
+    menu_gestion_personnel.h \
+    personnel.h
 
 FORMS += \
-    dialog1.ui \
+    crud_personnel.ui \
     mainwindow.ui \
-    menu_gestion_perso.ui \
-    vue_perso.ui
+    menu_gestion_personnel.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

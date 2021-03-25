@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "menu_gestion_perso.h"
+#include "menu_gestion_personnel.h"
 #include "vue_perso.h"
 #include <QMessageBox>
 #include "connection.h"
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Connection C;
     bool test=C.createConnection();
-    Menu_gestion_perso GP;
+    Menu_Gestion_Personnel GP;
     //Vue_perso v;
     MainWindow w;
 

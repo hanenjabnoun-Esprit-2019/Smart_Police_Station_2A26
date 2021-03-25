@@ -19,6 +19,7 @@ public:
     void setGrade(QString);
     bool Ajouter_personnel();
     QSqlQueryModel* Afficher_personnel();
+    bool Modifier_personnel(QString, QString, QString, QString);
     bool Supprimer_personnel(QString);
 private:
     QString Id, Nom, Prenom, Grade;

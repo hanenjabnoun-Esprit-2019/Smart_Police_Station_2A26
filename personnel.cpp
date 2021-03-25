@@ -67,6 +67,13 @@ QSqlQueryModel* Personnel::Afficher_personnel(){
 
     return model;
 }
+//modification
+bool Personnel::Modifier_personnel(QString Id, QString Nom, QString Prenom, QString Grade){
+    QSqlQuery query;
+    query.prepare("UPDATE personnel SET Grade=:Grade WHERE Id=:Id");
+    query.bindValue(":Grade", Grade);
+    return query.exec();
+}
 //suppression
 bool Personnel::Supprimer_personnel(QString Id){
     QSqlQuery query;

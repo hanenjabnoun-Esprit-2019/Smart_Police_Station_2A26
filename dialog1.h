@@ -16,10 +16,11 @@ public:
     ~Dialog1();
 
 private slots:
-    void on_pushButton_destroyed();
+    void on_pushButton_avance_clicked();
 
 private:
     Ui::Dialog1 *ui;
+    //Dialog2 *D2;
 };
 
 #endif // DIALOG1_H
