@@ -25,35 +25,35 @@ void Crud_Personnel::on_pushButton_AjoutPerso_clicked()
     QString Grade = ui->comboBox_Grade->currentText();
     Personnel p(Id, Nom, Prenom, Grade);
     bool test = p.Ajouter_personnel();
-    QMessageBox msgBox;
+    //QMessageBox msgBox;
 
     if(test){
-        msgBox.setText("Ajout réussi");
+        QMessageBox::information(this, tr("Done"), QString(tr("Ajout avec succès")));
         ui->tableView_Personnel->setModel(P.Afficher_personnel());
     }
     else
-        msgBox.setText("Echec");
-    msgBox.exec();
+        QMessageBox::information(this, tr("Failed"), QString(tr("Ajout échoué")));
+    //msgBox.exec();
 }
 
 void Crud_Personnel::on_pushButton_ModifPersonnel_clicked()
 {
     QString Id = ui->lineEdit_IdModif->text();
-    QString Nom = "  ";
+    QString Nom = " ";
     QString Prenom = " ";
     QString Grade = ui->comboBox_GradeModif->currentText();
 
     Personnel P(Id, Nom, Prenom, Grade);
-    bool modif = P.Modifier_personnel(Id, Nom, Prenom, Grade);
-    QMessageBox msgBox;
+    bool modif = P.Modifier_personnel(Id, Grade);
+    //QMessageBox msgBox;
     if(modif){
         ui->tableView_Personnel->setModel(P.Afficher_personnel());
         QMessageBox::information(this, tr("Done"), QString(tr("Modification réussie")));
     }
     else
-        QMessageBox::information(this, tr("Done"), QString(tr("Echec")));
+        QMessageBox::information(this, tr("Failed"), QString(tr("Modification échoué")));
 
-    msgBox.exec();
+    //msgBox.exec();
 }
 
 void Crud_Personnel::on_pushButton_SupprPerso_clicked()
@@ -61,15 +61,15 @@ void Crud_Personnel::on_pushButton_SupprPerso_clicked()
     Personnel P1;
     P1.setId(ui->lineEdit_IdSuppr->text());
     bool test = P1.Supprimer_personnel(P1.getId());
-    QMessageBox msgBox;
+    //QMessageBox msgBox;
 
     if(test){
-        msgBox.setText("Suppression réussi");
+        QMessageBox::information(this, tr("Done"), QString(tr("Suppression réussie")));
         ui->tableView_Personnel->setModel(P.Afficher_personnel());
     }
     else
-        msgBox.setText("Echec");
-    msgBox.exec();
+        QMessageBox::critical(this, tr("Failed"), QString(tr("Echec de suppresssion")));
+    //msgBox.exec();
 }
 
 void Crud_Personnel::on_pushButton_RetourGestionPerso_clicked()

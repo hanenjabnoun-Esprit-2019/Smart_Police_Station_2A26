@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_RetourMenuPrincipale_clicked();
 
+    void on_pushButton_CrudHoraire_clicked();
+
 private:
     Ui::Menu_Gestion_Personnel *ui;
 };

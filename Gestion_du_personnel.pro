@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    crud_horaire.cpp \
     crud_personnel.cpp \
     horaire.cpp \
     main.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 
 HEADERS += \
     connection.h \
+    crud_horaire.h \
     crud_personnel.h \
     horaire.h \
     mainwindow.h \
@@ -33,6 +35,7 @@ HEADERS += \
     personnel.h
 
 FORMS += \
+    crud_horaire.ui \
     crud_personnel.ui \
     mainwindow.ui \
     menu_gestion_personnel.ui

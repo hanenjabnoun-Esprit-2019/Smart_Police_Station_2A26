@@ -1,6 +1,7 @@
 #include "menu_gestion_personnel.h"
 #include "ui_menu_gestion_personnel.h"
 #include "crud_personnel.h"
+#include "crud_horaire.h"
 
 Menu_Gestion_Personnel::Menu_Gestion_Personnel(QWidget *parent) :
     QDialog(parent),
@@ -25,4 +26,12 @@ void Menu_Gestion_Personnel::on_pushButton_CrudPerso_clicked()
 void Menu_Gestion_Personnel::on_pushButton_RetourMenuPrincipale_clicked()
 {
 
+}
+
+void Menu_Gestion_Personnel::on_pushButton_CrudHoraire_clicked()
+{
+    Crud_Horaire CH;
+    CH.setModal(true);
+    hide();
+    CH.exec();
 }

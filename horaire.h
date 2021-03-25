@@ -9,19 +9,28 @@ class Horaire
 {
 public:
     Horaire();
-    Horaire(int, QDateTime, QDateTime);
-    int getRef();
+    Horaire(QString, QDateTime, QDateTime, QString, QString);
+    //
+    QString getRef();
     QDateTime getDebut();
     QDateTime getFin();
-    void setRef(int);
+    QString getMission();
+    QString getAgent();
+    //
+    void setRef(QString);
     void setDebut(QDateTime);
     void setFin(QDateTime);
+    void setMission(QString);
+    void setAgent(QString);
+    //
     bool Ajouter_horaire();
-    bool Supprimer_horaire(int);
+    bool Supprimer_horaire(QString);
+    bool Modifier_Horaire(QString, QDateTime, QDateTime, QString, QString);
     QSqlQueryModel* Afficher_horaire();
 private:
-    int reference;
+    QString reference;
     QDateTime debut, fin;
+    QString mission, agent;
 
 };
 

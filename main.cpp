@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "menu_gestion_personnel.h"
-#include "vue_perso.h"
 #include <QMessageBox>
 #include "connection.h"
 #include <QApplication>
