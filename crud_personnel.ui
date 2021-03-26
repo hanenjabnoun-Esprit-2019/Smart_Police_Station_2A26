@@ -511,6 +511,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <height>31</height>
        </rect>
       </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Nom">
       <property name="geometry">
@@ -521,6 +524,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <height>31</height>
        </rect>
       </property>
+      <property name="maxLength">
+       <number>25</number>
+      </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Prenom">
       <property name="geometry">
@@ -530,6 +536,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <width>191</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="maxLength">
+       <number>25</number>
       </property>
      </widget>
      <widget class="QComboBox" name="comboBox_Grade">
@@ -719,6 +728,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <height>31</height>
        </rect>
       </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
      </widget>
      <widget class="QComboBox" name="comboBox_GradeModif">
       <property name="geometry">
@@ -878,6 +890,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <width>191</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
       </property>
      </widget>
     </widget>

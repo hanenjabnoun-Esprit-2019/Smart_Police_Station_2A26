@@ -69,7 +69,10 @@ bool Horaire::Ajouter_horaire(){
 QSqlQueryModel* Horaire::Afficher_horaire(){
     QSqlQueryModel* model1 = new QSqlQueryModel();
 
-    model1->setQuery("SELECT * FROM horaire");
+    model1->setQuery("SELECT h.*, p.nom, p.prenom "
+                     "FROM horaire h"
+                     "LEFT JOIN personnel p ON p.id = h.agent");
+
     model1->setHeaderData(0, Qt::Horizontal, QObject::tr("Référence"));
     model1->setHeaderData(1, Qt::Horizontal, QObject::tr("Début"));
     model1->setHeaderData(2, Qt::Horizontal, QObject::tr("Fin"));

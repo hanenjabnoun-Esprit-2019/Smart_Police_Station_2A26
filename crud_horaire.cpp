@@ -26,12 +26,39 @@ void Crud_Horaire::on_pushButton_RetourMenuPrincipale_clicked()
 
 void Crud_Horaire::on_pushButton_AjoutHoraire_clicked()
 {
+    QString reference = ui->lineEdit_RefHoraire->text();
+    QDateTime debut = ui->dateTimeEdit_Debut->dateTime();
+    QDateTime fin = ui->dateTimeEdit_Fin->dateTime();
+    QString mission = ui->comboBox_Mission->currentText();
+    QString agent = ui->lineEdit_AgentHor->text();
+    Horaire H(reference, debut, fin, mission, agent);
+    bool ajout = H.Ajouter_horaire();
 
+    if(ajout){
+        QMessageBox::information(this, tr("Done"), QString(tr("Ajout avec succès")));
+        ui->tableView_Horaire->setModel(H.Afficher_horaire());
+    }
+    else
+        QMessageBox::information(this, tr("Failed"), QString(tr("Ajout échoué")));
 }
 
 void Crud_Horaire::on_pushButton_ModifHoraire_clicked()
 {
+    QString reference = ui->lineEdit_RefHorModif->text();
+    QDateTime debut = ui->dateTimeEdit_DebutHorModif->dateTime();
+    QDateTime fin = ui->dateTimeEdit_FinHorModif->dateTime();
+    QString mission = ui->comboBox_MissionHorModif->currentText();
+    QString agent = ui->lineEdit_AgentHorModif->text();
 
+    Horaire H(reference, debut, fin, mission, agent);
+    bool modif = H.Modifier_Horaire(reference, debut, fin, mission, agent);
+
+    if(modif){
+        ui->tableView_Horaire->setModel(H.Afficher_horaire());
+        QMessageBox::information(this, tr("Done"), QString(tr("Modification réussie")));
+    }
+    else
+        QMessageBox::information(this, tr("Failed"), QString(tr("Modification échoué")));
 }
 
 void Crud_Horaire::on_pushButton_SupprHoraire_clicked()

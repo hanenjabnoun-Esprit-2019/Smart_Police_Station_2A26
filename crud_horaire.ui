@@ -515,17 +515,23 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <property name="title">
       <string>Ajout</string>
      </property>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="lineEdit_RefHoraire">
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>50</y>
+        <y>60</y>
         <width>113</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
      </widget>
-     <widget class="QDateTimeEdit" name="dateTimeEdit">
+     <widget class="QDateTimeEdit" name="dateTimeEdit_Debut">
       <property name="geometry">
        <rect>
         <x>180</x>
@@ -535,7 +541,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </rect>
       </property>
      </widget>
-     <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+     <widget class="QDateTimeEdit" name="dateTimeEdit_Fin">
       <property name="geometry">
        <rect>
         <x>180</x>
@@ -545,24 +551,27 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </rect>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="comboBox_Mission">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>180</x>
         <y>240</y>
-        <width>62</width>
+        <width>81</width>
         <height>22</height>
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="lineEdit_AgentHor">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>180</x>
         <y>300</y>
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
@@ -582,7 +591,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>130</y>
+        <y>120</y>
         <width>47</width>
         <height>14</height>
        </rect>
@@ -595,7 +604,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>190</y>
+        <y>180</y>
         <width>47</width>
         <height>14</height>
        </rect>
@@ -607,8 +616,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>250</y>
+        <x>40</x>
+        <y>240</y>
         <width>47</width>
         <height>14</height>
        </rect>
@@ -620,8 +629,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>310</y>
+        <x>40</x>
+        <y>300</y>
         <width>47</width>
         <height>14</height>
        </rect>
@@ -670,12 +679,133 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <x>60</x>
        <y>50</y>
        <width>501</width>
-       <height>361</height>
+       <height>370</height>
       </rect>
      </property>
      <property name="title">
       <string>Modification</string>
      </property>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>60</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Référence</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>120</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nouveau début</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>180</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nouvelle fin</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>240</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nouvelle mission</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>300</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nouvel agent</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_RefHorModif">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>60</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AgentHorModif">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>300</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_MissionHorModif">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>240</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="dateTimeEdit_DebutHorModif">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>120</y>
+        <width>194</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="dateTimeEdit_FinHorModif">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>180</y>
+        <width>194</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QPushButton" name="pushButton_ModifHoraire">
      <property name="geometry">
@@ -728,6 +858,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <width>121</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
       </property>
      </widget>
     </widget>
