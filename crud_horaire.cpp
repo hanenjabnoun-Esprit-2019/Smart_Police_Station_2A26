@@ -2,6 +2,9 @@
 #include "ui_crud_horaire.h"
 #include "menu_gestion_personnel.h"
 #include <QMessageBox>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QPrinter>
 
 Crud_Horaire::Crud_Horaire(QWidget *parent) :
     QDialog(parent),
@@ -73,4 +76,25 @@ void Crud_Horaire::on_pushButton_SupprHoraire_clicked()
     }
     else
         QMessageBox::critical(this, tr("Failed"), QString(tr("Echec de suppresssion")));
+}
+
+int Crud_Horaire::on_pushButton_exportpdf_clicked()
+{
+    QPrinter printer;
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setOutputFileName("/foobar/nonwritable.pdf");
+    QPainter painter;
+    if (! painter.begin(&printer)) { // failed to open file
+        qWarning("failed to open file, is it writable?");
+        return 1;
+    }
+    painter.drawText(10, 10, "Planing du personnel");
+    painter.drawTextItem(10, 40, ui->tableView_Horaire->s);
+    if (! printer.newPage()) {
+        qWarning("failed in flushing page to disk, disk full?");
+        return 1;
+    }
+    painter.drawText(10, 10, "Test 2");
+    painter.end();
+    return 0;
 }

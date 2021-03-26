@@ -497,7 +497,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -666,6 +666,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <width>501</width>
        <height>361</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_exportpdf">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>210</y>
+       <width>75</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Exporter</string>
      </property>
     </widget>
    </widget>
