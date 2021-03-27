@@ -658,16 +658,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <attribute name="title">
      <string>Afficher les horaires</string>
     </attribute>
-    <widget class="QTableView" name="tableView_Horaire">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>50</y>
-       <width>501</width>
-       <height>361</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_exportpdf">
      <property name="geometry">
       <rect>
@@ -679,6 +669,16 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      </property>
      <property name="text">
       <string>Exporter</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView_AfficheHor">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>50</y>
+       <width>501</width>
+       <height>361</height>
+      </rect>
      </property>
     </widget>
    </widget>

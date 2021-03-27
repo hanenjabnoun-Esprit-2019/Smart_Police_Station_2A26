@@ -25,7 +25,7 @@ private slots:
 
     void on_pushButton_SupprHoraire_clicked();
 
-    int on_pushButton_exportpdf_clicked();
+    void on_pushButton_exportpdf_clicked();
 
 private:
     Ui::Crud_Horaire *ui;
