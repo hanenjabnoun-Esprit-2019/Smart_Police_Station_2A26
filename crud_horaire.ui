@@ -497,7 +497,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -559,19 +559,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <width>81</width>
         <height>22</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_AgentHor">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>300</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="maxLength">
-       <number>10</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
@@ -637,6 +624,16 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </property>
       <property name="text">
        <string>Agent</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Agent">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>300</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
       </property>
      </widget>
     </widget>

@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QDateTime>
 #include <QTableView>
+#include "connection.h"
 
 Horaire::Horaire()
 {
@@ -103,4 +104,14 @@ bool Horaire::Supprimer_horaire(QString reference){
           query1.bindValue(0, reference);
 
           return query1.exec();
+}
+//affectation
+QSqlQueryModel * Horaire::Affecter_agent(){
+    QSqlQueryModel* agent = new QSqlQueryModel();
+    QSqlQuery* qry = new QSqlQuery();
+    qry->prepare("SELECT nom FROM personnel");
+    qry->exec();
+    agent->setQuery(*qry);
+    qDebug() <<(agent->rowCount());
+    return agent;
 }

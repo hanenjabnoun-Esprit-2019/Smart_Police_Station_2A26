@@ -23,7 +23,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu_gestion_personnel.cpp \
-    personnel.cpp
+    personnel.cpp \
+    recherche_perso.cpp
 
 HEADERS += \
     connection.h \
@@ -32,13 +33,15 @@ HEADERS += \
     horaire.h \
     mainwindow.h \
     menu_gestion_personnel.h \
-    personnel.h
+    personnel.h \
+    recherche_perso.h
 
 FORMS += \
     crud_horaire.ui \
     crud_personnel.ui \
     mainwindow.ui \
-    menu_gestion_personnel.ui
+    menu_gestion_personnel.ui \
+    recherche_perso.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

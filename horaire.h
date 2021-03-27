@@ -27,6 +27,7 @@ public:
     bool Supprimer_horaire(QString);
     bool Modifier_Horaire(QString, QDateTime, QDateTime, QString, QString);
     QSqlQueryModel* Afficher_horaire();
+    QSqlQueryModel* Affecter_agent();
 private:
     QString reference;
     QDateTime debut, fin;
