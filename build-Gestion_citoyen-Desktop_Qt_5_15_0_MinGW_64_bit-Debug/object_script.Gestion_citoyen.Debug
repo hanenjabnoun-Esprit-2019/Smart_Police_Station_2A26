@@ -1,0 +1,12 @@
+debug/citoyen.o
+debug/connection.o
+debug/crud_citoyen.o
+debug/crud_demande.o
+debug/demande_a.o
+debug/main.o
+debug/mainwindow.o
+debug/menu_gestion_citoyen.o
+debug/moc_crud_citoyen.o
+debug/moc_crud_demande.o
+debug/moc_mainwindow.o
+debug/moc_menu_gestion_citoyen.o

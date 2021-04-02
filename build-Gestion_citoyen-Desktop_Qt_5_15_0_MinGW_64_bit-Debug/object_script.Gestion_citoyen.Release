@@ -1,0 +1,12 @@
+release/citoyen.o
+release/connection.o
+release/crud_citoyen.o
+release/crud_demande.o
+release/demande_a.o
+release/main.o
+release/mainwindow.o
+release/menu_gestion_citoyen.o
+release/moc_crud_citoyen.o
+release/moc_crud_demande.o
+release/moc_mainwindow.o
+release/moc_menu_gestion_citoyen.o
