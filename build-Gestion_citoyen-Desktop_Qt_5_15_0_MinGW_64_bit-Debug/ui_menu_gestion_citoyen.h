@@ -10,6 +10,7 @@
 #define UI_MENU_GESTION_CITOYEN_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
@@ -23,7 +24,6 @@ public:
     QGroupBox *groupBox;
     QPushButton *pb_citoyen;
     QPushButton *pb_demande_ad;
-    QPushButton *pushButton_4;
     QPushButton *pushButton;
 
     void setupUi(QDialog *Menu_gestion_citoyen)
@@ -500,16 +500,22 @@ public:
         groupBox->setGeometry(QRect(40, 60, 701, 471));
         pb_citoyen = new QPushButton(groupBox);
         pb_citoyen->setObjectName(QString::fromUtf8("pb_citoyen"));
-        pb_citoyen->setGeometry(QRect(124, 70, 451, 71));
+        pb_citoyen->setGeometry(QRect(130, 110, 451, 71));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../tn so/citoyens.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_citoyen->setIcon(icon);
         pb_demande_ad = new QPushButton(groupBox);
         pb_demande_ad->setObjectName(QString::fromUtf8("pb_demande_ad"));
-        pb_demande_ad->setGeometry(QRect(124, 190, 461, 71));
-        pushButton_4 = new QPushButton(groupBox);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(124, 300, 471, 71));
+        pb_demande_ad->setGeometry(QRect(120, 280, 461, 71));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("../../tn so/t\303\251l\303\251chargement.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_demande_ad->setIcon(icon1);
         pushButton = new QPushButton(Menu_gestion_citoyen);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(820, 530, 75, 23));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("../../tn so/50720.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon2);
 
         retranslateUi(Menu_gestion_citoyen);
 
@@ -522,8 +528,7 @@ public:
         groupBox->setTitle(QCoreApplication::translate("Menu_gestion_citoyen", "Gestion citoyen", nullptr));
         pb_citoyen->setText(QCoreApplication::translate("Menu_gestion_citoyen", "CITOYEN", nullptr));
         pb_demande_ad->setText(QCoreApplication::translate("Menu_gestion_citoyen", "DEMANDE ADMINISTRATIVE", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Menu_gestion_citoyen", "RECHERCHE D.A", nullptr));
-        pushButton->setText(QCoreApplication::translate("Menu_gestion_citoyen", "Retour", nullptr));
+        pushButton->setText(QString());
     } // retranslateUi
 
 };

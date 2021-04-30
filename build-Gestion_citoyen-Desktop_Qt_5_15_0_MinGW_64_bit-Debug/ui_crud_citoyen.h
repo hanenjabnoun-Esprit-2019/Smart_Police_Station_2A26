@@ -10,6 +10,7 @@
 #define UI_CRUD_CITOYEN_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
@@ -38,6 +39,9 @@ public:
     QPushButton *pb_ajouter;
     QWidget *tab_2;
     QTableView *tab_citoyen;
+    QLineEdit *la_recherche;
+    QPushButton *pb_recherche;
+    QPushButton *pb_export_pdf;
     QWidget *tab_3;
     QLabel *label_5;
     QLabel *label_6;
@@ -523,7 +527,7 @@ public:
 ""));
         tabWidget = new QTabWidget(Crud_citoyen);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(40, 60, 701, 471));
+        tabWidget->setGeometry(QRect(40, 20, 701, 471));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         groupBox = new QGroupBox(tab);
@@ -550,12 +554,30 @@ public:
         pb_ajouter = new QPushButton(tab);
         pb_ajouter->setObjectName(QString::fromUtf8("pb_ajouter"));
         pb_ajouter->setGeometry(QRect(580, 210, 75, 41));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../tn so/53310.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_ajouter->setIcon(icon);
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         tab_citoyen = new QTableView(tab_2);
         tab_citoyen->setObjectName(QString::fromUtf8("tab_citoyen"));
         tab_citoyen->setGeometry(QRect(60, 50, 501, 361));
+        la_recherche = new QLineEdit(tab_2);
+        la_recherche->setObjectName(QString::fromUtf8("la_recherche"));
+        la_recherche->setGeometry(QRect(190, 20, 151, 20));
+        pb_recherche = new QPushButton(tab_2);
+        pb_recherche->setObjectName(QString::fromUtf8("pb_recherche"));
+        pb_recherche->setGeometry(QRect(350, 20, 75, 23));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("../../tn so/search-vector-icon-png_256686.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_recherche->setIcon(icon1);
+        pb_export_pdf = new QPushButton(tab_2);
+        pb_export_pdf->setObjectName(QString::fromUtf8("pb_export_pdf"));
+        pb_export_pdf->setGeometry(QRect(590, 362, 75, 31));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("../../tn so/23935.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_export_pdf->setIcon(icon2);
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
@@ -580,6 +602,9 @@ public:
         pb_mofidier = new QPushButton(tab_3);
         pb_mofidier->setObjectName(QString::fromUtf8("pb_mofidier"));
         pb_mofidier->setGeometry(QRect(534, 172, 91, 61));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("../../tn so/4561.webp"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_mofidier->setIcon(icon3);
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
@@ -592,14 +617,20 @@ public:
         pushButton = new QPushButton(tab_4);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(430, 220, 75, 41));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("../../../Downloads/edit-delete-3.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon4);
         tabWidget->addTab(tab_4, QString());
         pushButton_RetourMenuGestionCit = new QPushButton(Crud_citoyen);
         pushButton_RetourMenuGestionCit->setObjectName(QString::fromUtf8("pushButton_RetourMenuGestionCit"));
         pushButton_RetourMenuGestionCit->setGeometry(QRect(820, 530, 75, 23));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8("../../tn so/50720.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_RetourMenuGestionCit->setIcon(icon5);
 
         retranslateUi(Crud_citoyen);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Crud_citoyen);
@@ -612,18 +643,20 @@ public:
         label->setText(QCoreApplication::translate("Crud_citoyen", "numero", nullptr));
         label_2->setText(QCoreApplication::translate("Crud_citoyen", "nom", nullptr));
         label_3->setText(QCoreApplication::translate("Crud_citoyen", "prenon", nullptr));
-        pb_ajouter->setText(QCoreApplication::translate("Crud_citoyen", "Ajouter", nullptr));
+        pb_ajouter->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("Crud_citoyen", "Ajouter citoyen ", nullptr));
+        pb_recherche->setText(QString());
+        pb_export_pdf->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("Crud_citoyen", "Afiicher citoyen", nullptr));
         label_5->setText(QCoreApplication::translate("Crud_citoyen", "entrer numero", nullptr));
         label_6->setText(QCoreApplication::translate("Crud_citoyen", "nouveau nom", nullptr));
         label_7->setText(QCoreApplication::translate("Crud_citoyen", "nouveau prenom", nullptr));
-        pb_mofidier->setText(QCoreApplication::translate("Crud_citoyen", "Modifier", nullptr));
+        pb_mofidier->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("Crud_citoyen", "modifier citoyen", nullptr));
         label_4->setText(QCoreApplication::translate("Crud_citoyen", "numero", nullptr));
-        pushButton->setText(QCoreApplication::translate("Crud_citoyen", "supprimer", nullptr));
+        pushButton->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("Crud_citoyen", "supprimer citoyen", nullptr));
-        pushButton_RetourMenuGestionCit->setText(QCoreApplication::translate("Crud_citoyen", "Retour", nullptr));
+        pushButton_RetourMenuGestionCit->setText(QString());
     } // retranslateUi
 
 };

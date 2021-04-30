@@ -10,6 +10,7 @@
 #define UI_CRUD_DEMANDE_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
@@ -36,6 +37,8 @@ public:
     QPushButton *pb_ajouter;
     QWidget *tab_3;
     QTableView *tab_demande_a;
+    QPushButton *pb_recherche;
+    QLineEdit *la_recherche;
     QWidget *tab_4;
     QPushButton *pb_modifier;
     QLabel *label_4;
@@ -545,18 +548,33 @@ public:
         pb_ajouter = new QPushButton(tab);
         pb_ajouter->setObjectName(QString::fromUtf8("pb_ajouter"));
         pb_ajouter->setGeometry(QRect(554, 232, 81, 51));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../../tn so/53311.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_ajouter->setIcon(icon);
         tabWidget->addTab(tab, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
         tab_demande_a = new QTableView(tab_3);
         tab_demande_a->setObjectName(QString::fromUtf8("tab_demande_a"));
         tab_demande_a->setGeometry(QRect(40, 60, 501, 361));
+        pb_recherche = new QPushButton(tab_3);
+        pb_recherche->setObjectName(QString::fromUtf8("pb_recherche"));
+        pb_recherche->setGeometry(QRect(350, 20, 75, 23));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("../../tn so/search-vector-icon-png_256686.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_recherche->setIcon(icon1);
+        la_recherche = new QLineEdit(tab_3);
+        la_recherche->setObjectName(QString::fromUtf8("la_recherche"));
+        la_recherche->setGeometry(QRect(172, 20, 141, 20));
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
         pb_modifier = new QPushButton(tab_4);
         pb_modifier->setObjectName(QString::fromUtf8("pb_modifier"));
         pb_modifier->setGeometry(QRect(540, 130, 101, 61));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("../../tn so/4561.webp"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_modifier->setIcon(icon2);
         label_4 = new QLabel(tab_4);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(56, 72, 81, 41));
@@ -568,7 +586,7 @@ public:
         le_id_2->setGeometry(QRect(240, 80, 113, 20));
         le_objet_2 = new QLineEdit(tab_4);
         le_objet_2->setObjectName(QString::fromUtf8("le_objet_2"));
-        le_objet_2->setGeometry(QRect(240, 210, 113, 20));
+        le_objet_2->setGeometry(QRect(240, 210, 113, 41));
         le_nom_2 = new QLineEdit(tab_4);
         le_nom_2->setObjectName(QString::fromUtf8("le_nom_2"));
         le_nom_2->setGeometry(QRect(240, 140, 113, 20));
@@ -587,10 +605,16 @@ public:
         pb_supprimer = new QPushButton(tab_2);
         pb_supprimer->setObjectName(QString::fromUtf8("pb_supprimer"));
         pb_supprimer->setGeometry(QRect(454, 162, 81, 41));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("../../../Downloads/edit-delete-3.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pb_supprimer->setIcon(icon3);
         tabWidget->addTab(tab_2, QString());
         retour_MenuGestion_Citoyen = new QPushButton(Crud_demande);
         retour_MenuGestion_Citoyen->setObjectName(QString::fromUtf8("retour_MenuGestion_Citoyen"));
         retour_MenuGestion_Citoyen->setGeometry(QRect(790, 480, 75, 23));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("../../tn so/50720.png"), QSize(), QIcon::Normal, QIcon::Off);
+        retour_MenuGestion_Citoyen->setIcon(icon4);
 
         retranslateUi(Crud_demande);
 
@@ -606,18 +630,19 @@ public:
         label->setText(QCoreApplication::translate("Crud_demande", "id", nullptr));
         label_2->setText(QCoreApplication::translate("Crud_demande", "nom", nullptr));
         label_3->setText(QCoreApplication::translate("Crud_demande", "objet", nullptr));
-        pb_ajouter->setText(QCoreApplication::translate("Crud_demande", "ajouter", nullptr));
+        pb_ajouter->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("Crud_demande", "Ajouter D.A", nullptr));
+        pb_recherche->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("Crud_demande", "Afficher D.A", nullptr));
-        pb_modifier->setText(QCoreApplication::translate("Crud_demande", "Modifier", nullptr));
+        pb_modifier->setText(QString());
         label_4->setText(QCoreApplication::translate("Crud_demande", "identifiant", nullptr));
         label_6->setText(QCoreApplication::translate("Crud_demande", "nouveau objet", nullptr));
         label_5->setText(QCoreApplication::translate("Crud_demande", "nouveau mon", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("Crud_demande", "Modifier D.A", nullptr));
         id->setText(QCoreApplication::translate("Crud_demande", "identifiant", nullptr));
-        pb_supprimer->setText(QCoreApplication::translate("Crud_demande", "supprimer", nullptr));
+        pb_supprimer->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("Crud_demande", "Supprimer D.A", nullptr));
-        retour_MenuGestion_Citoyen->setText(QCoreApplication::translate("Crud_demande", "retour", nullptr));
+        retour_MenuGestion_Citoyen->setText(QString());
     } // retranslateUi
 
 };
