@@ -46,7 +46,7 @@ QSqlQueryModel* demande_a::afficher()
 {
     QSqlQueryModel* model=new QSqlQueryModel();
 
-    model->setQuery("SELECT* FROM demande_a");
+    model->setQuery("SELECT* FROM demande_a  ORDER BY identifiant");
    // model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
    // model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
    // model->setHeaderData(2, Qt::Horizontal, QObject::tr("objet"));
@@ -66,4 +66,11 @@ bool demande_a::modifier(int id,QString nom,   QString objet){
     query.bindValue(":objet", objet);
 
     return query.exec();
+}
+
+QSqlQueryModel * demande_a::rechercher(QString rech)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from demande_a where identifiant  LIKE '"+rech+"%'" );
+    return model;
 }

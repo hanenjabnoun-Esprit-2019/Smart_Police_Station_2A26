@@ -55,7 +55,7 @@ void Crud_demande::on_pb_supprimer_clicked()
 
 void Crud_demande::on_pb_modifier_clicked()
 {
-    int id = ui->le_id->text().toInt();
+    int id = ui->le_id_2->text().toInt();
     QString nom = ui->le_nom_2->text();
     QString objet = ui->le_objet_2->text();
 
@@ -89,4 +89,10 @@ void Crud_demande::on_retour_MenuGestion_Citoyen_clicked()
     MGC.setModal(true);
     hide();
     MGC.exec();
+}
+
+void Crud_demande::on_pb_recherche_clicked()
+{
+    QString id = ui->la_recherche->text();
+    ui->tab_demande_a->setModel(E.rechercher(id));
 }

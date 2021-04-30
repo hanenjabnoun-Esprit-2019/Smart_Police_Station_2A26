@@ -25,6 +25,8 @@ private slots:
 
     void on_retour_MenuGestion_Citoyen_clicked();
 
+    void on_pb_recherche_clicked();
+
 private:
     Ui::Crud_demande *ui;
      demande_a E;

@@ -563,7 +563,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>ajouter</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/53311.png</normaloff>../../tn so/53311.png</iconset>
      </property>
     </widget>
    </widget>
@@ -578,6 +582,33 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <y>60</y>
        <width>501</width>
        <height>361</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_recherche">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/search-vector-icon-png_256686.jpg</normaloff>../../tn so/search-vector-icon-png_256686.jpg</iconset>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="la_recherche">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>20</y>
+       <width>141</width>
+       <height>20</height>
       </rect>
      </property>
     </widget>
@@ -596,7 +627,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>Modifier</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/4561.webp</normaloff>../../tn so/4561.webp</iconset>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -641,7 +676,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <x>240</x>
        <y>210</y>
        <width>113</width>
-       <height>20</height>
+       <height>41</height>
       </rect>
      </property>
     </widget>
@@ -706,7 +741,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>supprimer</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Downloads/edit-delete-3.png</normaloff>../../../Downloads/edit-delete-3.png</iconset>
      </property>
     </widget>
    </widget>
@@ -721,7 +760,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </rect>
    </property>
    <property name="text">
-    <string>retour</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../tn so/50720.png</normaloff>../../tn so/50720.png</iconset>
    </property>
   </widget>
  </widget>

@@ -17,6 +17,8 @@ public:
    QSqlQueryModel* afficher ();
    bool supprimer(int);
    bool modifier(int, QString, QString);
+  QSqlQueryModel * rechercher(QString);
+  //QSqlQueryModel * tri();
 private:
     int numero;
     QString nom, prenom;

@@ -25,6 +25,12 @@ private slots:
 
     void on_pb_mofidier_clicked();
 
+    void on_pb_recherche_clicked();
+
+    void on_pb_export_pdf_clicked();
+
+    void on_pb_tri_clicked();
+
 private:
     Ui::Crud_citoyen *ui;
     Citoyen E;

@@ -46,7 +46,7 @@ QSqlQueryModel* Citoyen::afficher()
 {
     QSqlQueryModel* model=new QSqlQueryModel();
 
-    model->setQuery("SELECT* FROM citoyen");
+    model->setQuery("SELECT* FROM citoyen ORDER BY numero ");
    // model->setHeaderData(0, Qt::Horizontal, QObject::tr("Numero"));
    // model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
    // model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
@@ -67,3 +67,25 @@ bool Citoyen::modifier(int numero, QString nom, QString prenom){
 
     return query.exec();
 }
+
+QSqlQueryModel *Citoyen::rechercher(QString rech)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from citoyen where numero  LIKE '"+rech+"%'" );
+    return model;
+}
+
+//QSqlQueryModel *Citoyen::tri()
+//{
+  // QSqlQueryModel * model= new QSqlQueryModel();
+
+  // model->setQuery("select * from citoyen ORDER BY numero DESC");
+
+
+  // model->setHeaderData(0, Qt::Horizontal, QObject::tr("numero"));
+ //  model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+ //  model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+
+
+  //     return model;
+//}

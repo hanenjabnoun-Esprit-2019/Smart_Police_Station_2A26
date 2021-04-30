@@ -472,13 +472,13 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>60</y>
+     <y>20</y>
      <width>701</width>
      <height>471</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -576,7 +576,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>Ajouter</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/53310.png</normaloff>../../tn so/53310.png</iconset>
      </property>
     </widget>
    </widget>
@@ -592,6 +596,50 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <width>501</width>
        <height>361</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="la_recherche">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>20</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_recherche">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/search-vector-icon-png_256686.jpg</normaloff>../../tn so/search-vector-icon-png_256686.jpg</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_export_pdf">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>362</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/23935.png</normaloff>../../tn so/23935.png</iconset>
      </property>
     </widget>
    </widget>
@@ -678,7 +726,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>Modifier</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../tn so/4561.webp</normaloff>../../tn so/4561.webp</iconset>
      </property>
     </widget>
    </widget>
@@ -719,7 +771,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>supprimer</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Downloads/edit-delete-3.png</normaloff>../../../Downloads/edit-delete-3.png</iconset>
      </property>
     </widget>
    </widget>
@@ -734,7 +790,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </rect>
    </property>
    <property name="text">
-    <string>Retour</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../tn so/50720.png</normaloff>../../tn so/50720.png</iconset>
    </property>
   </widget>
  </widget>

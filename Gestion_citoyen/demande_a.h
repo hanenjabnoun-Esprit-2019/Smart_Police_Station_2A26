@@ -18,6 +18,7 @@ public:
    QSqlQueryModel* afficher ();
    bool supprimer(int);
    bool modifier(int,QString , QString);
+   QSqlQueryModel * rechercher(QString);
 private:
     int id;
     QString nom, objet;

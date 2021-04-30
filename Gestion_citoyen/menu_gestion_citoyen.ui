@@ -483,8 +483,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <widget class="QPushButton" name="pb_citoyen">
     <property name="geometry">
      <rect>
-      <x>124</x>
-      <y>70</y>
+      <x>130</x>
+      <y>110</y>
       <width>451</width>
       <height>71</height>
      </rect>
@@ -492,12 +492,16 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <property name="text">
      <string>CITOYEN</string>
     </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../tn so/citoyens.png</normaloff>../../tn so/citoyens.png</iconset>
+    </property>
    </widget>
    <widget class="QPushButton" name="pb_demande_ad">
     <property name="geometry">
      <rect>
-      <x>124</x>
-      <y>190</y>
+      <x>120</x>
+      <y>280</y>
       <width>461</width>
       <height>71</height>
      </rect>
@@ -505,18 +509,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <property name="text">
      <string>DEMANDE ADMINISTRATIVE</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>124</x>
-      <y>300</y>
-      <width>471</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>RECHERCHE D.A</string>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../tn so/téléchargement.jpg</normaloff>../../tn so/téléchargement.jpg</iconset>
     </property>
    </widget>
   </widget>
@@ -530,7 +525,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </rect>
    </property>
    <property name="text">
-    <string>Retour</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../tn so/50720.png</normaloff>../../tn so/50720.png</iconset>
    </property>
   </widget>
  </widget>
