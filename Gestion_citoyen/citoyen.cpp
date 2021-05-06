@@ -75,17 +75,17 @@ QSqlQueryModel *Citoyen::rechercher(QString rech)
     return model;
 }
 
-//QSqlQueryModel *Citoyen::tri()
-//{
-  // QSqlQueryModel * model= new QSqlQueryModel();
+QSqlQueryModel *Citoyen::tri()
+{
+   QSqlQueryModel * model= new QSqlQueryModel();
 
-  // model->setQuery("select * from citoyen ORDER BY numero DESC");
-
-
-  // model->setHeaderData(0, Qt::Horizontal, QObject::tr("numero"));
- //  model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
- //  model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+   model->setQuery("select * from citoyen ORDER BY numero DESC");
 
 
-  //     return model;
-//}
+   model->setHeaderData(0, Qt::Horizontal, QObject::tr("numero"));
+  model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+  model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenom"));
+
+
+      return model;
+}

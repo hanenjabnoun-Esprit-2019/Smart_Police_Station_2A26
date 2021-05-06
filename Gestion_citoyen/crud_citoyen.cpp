@@ -170,3 +170,8 @@ void Crud_citoyen::on_pb_export_pdf_clicked()
 
         delete document;
 }
+
+void Crud_citoyen::on_pb_tri_clicked()
+{
+        ui->tab_citoyen->setModel(E.tri ());
+}

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include<demande_a.h>
+#include"arduino.h"
 
 namespace Ui {
 class Crud_demande;
@@ -27,9 +28,13 @@ private slots:
 
     void on_pb_recherche_clicked();
 
+    void update_label();
+
 private:
     Ui::Crud_demande *ui;
      demande_a E;
+     arduino A;
+     QByteArray data;
 };
 
 #endif // CRUD_DEMANDE_H

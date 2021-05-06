@@ -642,6 +642,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <normaloff>../../tn so/23935.png</normaloff>../../tn so/23935.png</iconset>
      </property>
     </widget>
+    <widget class="QPushButton" name="pb_tri">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>302</y>
+       <width>75</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TRI</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">

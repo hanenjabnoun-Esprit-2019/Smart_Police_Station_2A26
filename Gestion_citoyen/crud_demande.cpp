@@ -12,6 +12,16 @@ Crud_demande::Crud_demande(QWidget *parent) :
     ui->setupUi(this);
     ui->le_id->setValidator( new QIntValidator(100, 99, this));
      ui->tab_demande_a->setModel(E.afficher());
+     int ret=A.connect_arduino();
+     switch (ret) {
+     case (0): qDebug()<<"Arduino est disponible et connectée"<<A.getarduino_port_name();
+         break;
+     case (1): qDebug()<<"Arduino est disponible mais elle n'est pas connectée"<<A.getarduino_port_name();
+         break;
+     case (-1): qDebug()<<"Arduino n'est pas disponible";
+         break;
+     }
+     QObject::connect(A.getserial(), SIGNAL(readyRead()),this,SLOT(update_label()));
 }
 
 Crud_demande::~Crud_demande()
@@ -95,4 +105,23 @@ void Crud_demande::on_pb_recherche_clicked()
 {
     QString id = ui->la_recherche->text();
     ui->tab_demande_a->setModel(E.rechercher(id));
+}
+
+void Crud_demande::update_label()
+{
+    data=A.read_from_arduino();
+        if(data=="1")
+//{
+            ui->label_7->setText("RED ON"); // si les données reçues de arduino via la liaison série sont égales à 1
+            //qDebug()<<"Personne detectée";}
+        // alors afficher ON
+
+        else if (data=="0")
+
+            ui->label_7->setText("GREEN ON");   // si les données reçues de arduino via la liaison série sont égales à 0
+         //alors afficher ON
+        else if (data=="2")
+
+            ui->label_7->setText("YELLOW ON");   // si les données reçues de arduino via la liaison série sont égales à 0
+         //alors afficher ON
 }
